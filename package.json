@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "expo start",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.ts",
+    "postinstall": "npm run build",
     "build:web": "expo export --platform web",
     "lint": "expo lint",
     "android": "expo run:android",
